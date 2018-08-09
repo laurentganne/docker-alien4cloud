@@ -10,7 +10,7 @@ RUN apk add --update openjdk8-jre-base bash && \
     tar xvf alien4cloud-dist-${a4c_version}-dist.tar.gz && \
     rm alien4cloud-dist-${a4c_version}-dist.tar.gz && \
     addgroup a4c && \
-     adduser -D -s /bin/bash -h /var/a4c -g a4c -G a4c a4c && \
+    adduser -D -s /bin/bash -h /var/a4c -g a4c -G a4c a4c && \
     umask 0022 && \
     chown -R a4c:a4c /var/a4c && \  
     rm -rf /var/cache/apk/*
