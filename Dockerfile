@@ -19,3 +19,11 @@ EXPOSE 8088
 USER a4c
 
 ENTRYPOINT cd /var/a4c/alien4cloud && ./alien4cloud.sh
+
+ARG BUILD_DATE
+ARG VCS_REF
+
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-url="https://github.com/laurentganne/docker-alien4cloud.git" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.schema-version="1.0.0-rc1"
